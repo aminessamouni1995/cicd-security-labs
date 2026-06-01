@@ -1,0 +1,13 @@
+name: Failing Policy Pipeline
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  policy-fail-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Simulate failed security policy
+        run: exit 1
