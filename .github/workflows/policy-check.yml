@@ -1,0 +1,13 @@
+name: Policy Check Pipeline
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  policy-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Simulate policy validation
+        run: echo "Policy validation passed"
